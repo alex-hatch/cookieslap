@@ -33,6 +33,7 @@ public class PlayerJoin implements Listener {
             PlayerConfig.getConfig().set("Players." + uuid + ".ChosenWeapon", ChatColor.GREEN + "SUPER COOKIE");
             PlayerConfig.save();
         }
+        Weapons.initializeWeapons();
         event.setJoinMessage(ChatColor.GOLD + event.getPlayer().getDisplayName() + ChatColor.GRAY + " has joined the game");
         InitializeSpawnState.initSpawnState(p);
     }
